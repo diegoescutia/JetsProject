@@ -1,7 +1,6 @@
 package com.skilldistillery.jets.entities;
 
 public class CargoPlane extends Jet implements CargoCarrier {
-	private String name = "Cargo Plane";
 
 	public CargoPlane() {
 		super();
@@ -13,17 +12,9 @@ public class CargoPlane extends Jet implements CargoCarrier {
 		super(model, speed, range, price);
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public void loadCargo() {
 		System.out.println("Loading cargo into plane...");
-		System.out.println("... Plane is cocked and loaded ...ready to go!");
+		System.out.println("... Plane is locked and loaded ...ready to go!");
 
 	}
 }

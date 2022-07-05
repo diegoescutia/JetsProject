@@ -8,18 +8,16 @@ public class JetsApplication {
 
 	public static void main(String[] args) {
 		JetsApplication rn = new JetsApplication();
-		
 		rn.run();
-		
 	}
 
-	private void run() {
+	public void run() {
 		Scanner scan = new Scanner(System.in);
 		menu(scan);
 		scan.close();
 	}
 	
-	private void menu(Scanner scan) {
+	public void menu(Scanner scan) {
 		Airfield fleet = new Airfield();
 		
 		boolean trigger = true;
@@ -72,7 +70,7 @@ public class JetsApplication {
 		case 9: fleet.quit();
 				trigger=false;
 				break;
-		
+		default: System.out.println("Enter a number between 1-9 ");
 		}
 		}
 	}

@@ -11,8 +11,6 @@ public class Airfield {
 
 	private List<Jet> fleet;
 
-	
-	
 	public Airfield() {
 		fleet = new ArrayList<>();
 		defaultPlanes();
@@ -85,7 +83,6 @@ public class Airfield {
 		System.out.println("Enter model");
 		String model = scan.next();
 		
-		
 		System.out.println("Enter speed");
 		double speed = scan.nextDouble();
 
@@ -95,7 +92,7 @@ public class Airfield {
 		System.out.println("Enter price");
 		double price = scan.nextDouble();
 
-		System.out.println("What type of aircraft is it?");
+		System.out.println("Enter the number for the type of aircraft");
 		System.out.println("1. Passenger Plane");
 		System.out.println("2. Cargo Plane");
 		System.out.println("3. Fighter Jet");
