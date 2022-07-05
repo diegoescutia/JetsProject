@@ -14,13 +14,14 @@ public class JetsApplication {
 	}
 
 	private void run() {
-		menu();
+		Scanner scan = new Scanner(System.in);
+		menu(scan);
+		scan.close();
 	}
 	
-	private void menu() {
+	private void menu(Scanner scan) {
 		Airfield fleet = new Airfield();
 		
-		Scanner scan = new Scanner(System.in);
 		boolean trigger = true;
 		while(trigger) {
 		
@@ -62,13 +63,13 @@ public class JetsApplication {
 		case 6: fleet.dogFight();
 				break;
 		
-		case 7: fleet.addJet();
+		case 7: fleet.addJet(scan);
 				break;
 				
-		case 8: fleet.removeJet();
+		case 8: fleet.removeJet(scan);
 				break;
 				
-		case 9: System.out.println("Thank you for using JETS ");
+		case 9: fleet.quit();
 				trigger=false;
 				break;
 		

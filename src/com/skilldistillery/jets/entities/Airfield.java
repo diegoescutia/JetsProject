@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -82,11 +81,11 @@ public class Airfield {
 		}
 	}
 
-	public void addJet() {
-		Scanner scan = new Scanner(System.in);
+	public void addJet(Scanner scan) {
 		System.out.println("Enter model");
-		String model = scan.nextLine();
-
+		String model = scan.next();
+		
+		
 		System.out.println("Enter speed");
 		double speed = scan.nextDouble();
 
@@ -112,10 +111,11 @@ public class Airfield {
 		
 		fleet.add(newPlane);
 		System.out.println("Your plane was added to the fleet");
+		System.out.println();
+		viewFleet();
 	}
 	
-	public void removeJet() {
-		Scanner scan = new Scanner(System.in);
+	public void removeJet(Scanner scan) {
 		
 		System.out.println("Type the number of the plane you want to remove");
 		
